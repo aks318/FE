@@ -34,91 +34,8 @@ The architecture should:
 - Support authentication and authorization in the future.
 - Be easy for multiple developers to maintain.
 
-## 3. Recommended Folder Structure
 
-Create the following structure:
-
-```text
-src/
-├── app/
-│   ├── App.tsx
-│   ├── main.tsx
-│   ├── router/
-│   │   ├── index.tsx
-│   │   ├── paths.ts
-│   │   └── ProtectedRoute.tsx
-│   ├── providers/
-│   │   ├── AppProviders.tsx
-│   │   ├── ThemeProvider.tsx
-│   │   └── QueryProvider.tsx
-│   └── layouts/
-│       ├── MainLayout/
-│       └── AuthLayout/
-│
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── fonts/
-│
-├── components/
-│   ├── common/
-│   │   ├── Button/
-│   │   ├── Loader/
-│   │   ├── Modal/
-│   │   ├── ErrorBoundary/
-│   │   └── EmptyState/
-│   └── ui/
-│
-├── features/
-│   ├── auth/
-│   │   ├── api/
-│   │   ├── components/
-│   │   ├── hooks/
-│   │   ├── pages/
-│   │   ├── types/
-│   │   └── index.ts
-│   │
-│   └── chat/
-│       ├── api/
-│       ├── components/
-│       ├── hooks/
-│       ├── pages/
-│       ├── types/
-│       ├── utils/
-│       └── index.ts
-│
-├── services/
-│   ├── api/
-│   │   ├── axiosInstance.ts
-│   │   ├── interceptors.ts
-│   │   ├── apiEndpoints.ts
-│   │   └── apiError.ts
-│   └── storage/
-│
-├── hooks/
-├── context/
-├── types/
-├── utils/
-├── constants/
-│
-├── styles/
-│   ├── abstracts/
-│   │   ├── _variables.scss
-│   │   ├── _mixins.scss
-│   │   └── _functions.scss
-│   ├── base/
-│   │   ├── _reset.scss
-│   │   ├── _typography.scss
-│   │   └── _global.scss
-│   ├── themes/
-│   └── main.scss
-│
-└── config/
-    ├── env.ts
-    └── appConfig.ts
-```
-
-## 4. Axios Configuration
+## 3. Axios Configuration
 
 Create a centralized Axios architecture.
 
@@ -145,7 +62,7 @@ apiClient.put<T>('/endpoint', payload);
 apiClient.delete<T>('/endpoint');
 ```
 
-## 5. Environment Configuration
+## 4. Environment Configuration
 
 Create:
 
@@ -168,7 +85,7 @@ Create a centralized, type-safe environment configuration.
 
 Validate required environment variables at application startup.
 
-## 6. Routing
+## 5. Routing
 
 Implement React Router DOM.
 
@@ -182,7 +99,7 @@ Requirements:
 - Protected route implementation as a reusable foundation.
 - Keep feature routes organized within their respective modules.
 
-## 7. MUI Theme Configuration
+## 6. MUI Theme Configuration
 
 Create a centralized MUI theme.
 
@@ -198,7 +115,7 @@ Requirements:
 
 Avoid styling every component independently when a reusable theme configuration can handle it.
 
-## 8. SCSS Architecture
+## 7. SCSS Architecture
 
 Use SCSS Modules for component-level styling.
 
@@ -215,7 +132,7 @@ Avoid global CSS pollution.
 
 Use MUI's `sx` prop for simple one-off MUI styling and SCSS Modules for more complex component styling.
 
-## 9. Code Quality
+## 8. Code Quality
 
 Configure:
 - TypeScript strict mode.
@@ -228,7 +145,7 @@ Configure:
 - Avoid oversized components.
 - Prefer functional components and custom hooks.
 
-## 10. Initial Application
+## 9. Initial Application
 
 Build a minimal working application containing:
 
@@ -248,7 +165,7 @@ The initial dashboard should be clean and professional.
 
 Do not build the actual chatbot functionality yet.
 
-## 11. Development Guidelines
+## 10. Development Guidelines
 
 IMPORTANT:
 
@@ -263,7 +180,7 @@ IMPORTANT:
 - Ensure all imports resolve correctly.
 - Ensure the project builds successfully.
 
-## 12. Execution Strategy
+## 11. Execution Strategy
 
 Follow these phases:
 
